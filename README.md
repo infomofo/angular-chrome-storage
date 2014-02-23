@@ -3,7 +3,15 @@ angular-chrome-storage
 
 A utility resource for accessing [chrome.storage](https://developer.chrome.com/extensions/storage)
 
-Chrome.storage is a great resource for chrome extensions- it can provide more storage than standard html5 localStorage, and can be accessed asynchronously, which can be useful. Also, accessing html5 localStorage in an extension will give you the error: ``window.localStorage is not available in packaged apps. Use chrome.storage.local instead.``.  However, it is somewhat difficult to debug.
+### Why use chrome.storage?
+
+Chrome.storage is a great resource for chrome extensions- it can provide more storage than standard html5 localStorage, and can be accessed asynchronously, which can be useful. 
+
+Also, accessing html5 localStorage in an extension will give you the error: ``window.localStorage is not available in packaged apps. Use chrome.storage.local instead.``.  
+
+### Why use this wrapper library?
+
+While chrome.storage is really useful, it is somewhat difficult to debug.
 
 This resource makes it easy to retrieve data from storage, as well as to provide fallbacks to populate the data in the case of a cache miss.  It also provides simple functions to clear the data, and access statistics on the usage of the data and quota.
  
@@ -22,7 +30,7 @@ Add the following script import
     <script src="bower_components/angular-chrome-storage/angular-chrome-storage.js"></script>
 ```
 
-### Import the chrome-image-storage module
+### Import the chromeStorage module
 
 ```javascript
 angular.module('myapp',['chromeStorage']);
