@@ -83,7 +83,7 @@ angular.module("chromeStorage",[])
 			if (chrome.runtime.lasterror){
 	            console.error(chrome.runtime.lasterror.message);
 	        } else {
-	        	chrome.log("key " + key + " has been dropped from the storage cache")
+	        	// console.log("key " + key + " has been dropped from the storage cache")
 	        }
 		});
 	},
