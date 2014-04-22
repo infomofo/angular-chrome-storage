@@ -136,7 +136,7 @@ angular.module("chromeStorage",[])
 		// console.log('getOrElse called with  cached key ' + key);
 		var deferred = $q.defer();
         fallback().then(function(data) {
-			keyValue = data;
+			var keyValue = data;
 			// console.log("caching value for "+ key + " : " + angular.toJson(keyValue));
 			var saveObject = {};
 			saveObject[key] = keyValue;
