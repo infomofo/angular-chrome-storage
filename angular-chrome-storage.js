@@ -129,6 +129,21 @@ angular.module("chromeStorage",[])
 		return deferred.promise;
 	},
 	/**
+	*
+	*/
+	set: function(key, value) {
+		var saveObject = {};
+		saveObject[key] = value;
+		area.set(saveObject, function() {
+			if (chrome.runtime.lasterror){
+							console.error(chrome.runtime.lasterror.message);
+					} else {
+					// console.log('saved ' + keyValue + " to key " + key);
+				}
+		});
+	},
+
+	/**
 	 * gets the value of key from the cache, or calls the fallback function, and populates the cache
 	 * with the value of the promise returned
 	 */
