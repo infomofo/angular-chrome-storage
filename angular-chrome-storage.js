@@ -2,7 +2,12 @@
 
 angular.module("chromeStorage",[])
 	.factory('chromeStorage', function($q) {
-	var area = chrome.storage.local; // change this to chrome.storage.sync for sync capabilities
+	var area = null;
+	try {
+		area = chrome.storage.local; // change this to chrome.storage.sync for sync capabilities
+	} catch (err) {
+		console.log("could not initiate chrome local storage: " + err);
+	}
 
 	/**
 	 * These are provided and updated only for debugging purposes.
