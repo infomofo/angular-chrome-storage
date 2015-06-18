@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module("chromeStorage",[])
-	.factory('chromeStorage', function($q) {
+	.factory("chromeStorage", ["$q", function($q) {
 	var area = null;
 	try {
 		area = chrome.storage.local; // change this to chrome.storage.sync for sync capabilities
@@ -179,4 +179,4 @@ angular.module("chromeStorage",[])
 	}
 
    }
-});
+}]);
